@@ -25,7 +25,7 @@ Retention table tell us:
  - What % of people are coming back to the app after 3 days, 5 days,...revealing the quality of onboarding experience
  - How often users return and how valuable that cohort is. This can be linked to quality of product, operations and customer support
 
-
+***
 ### Dataset
 #### Entity Relationship Diagram
 <img width="583" alt="Ảnh màn hình 2023-07-04 lúc 17 03 30" src="https://github.com/hanhdang9/8-Week-SQL-Challenge/assets/122140143/2b4e0357-ad37-4a73-b1fc-b8a37dc62cbc">
