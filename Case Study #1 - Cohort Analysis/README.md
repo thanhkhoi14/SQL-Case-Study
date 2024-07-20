@@ -10,14 +10,14 @@
 * [Questions and Answers](#questions-and-answers)
 ***
 ### Context
-#### What is Cohort Analysis?
+#### 1. What is Cohort Analysis?
 A cohort is simply a group of people who have something in common.Therefore, a cohort analysis is simply an analysis of several different cohorts (i.e. groups of customers) to get a better understanding of behaviors, patterns, and trends.
 
 ![image](https://github.com/user-attachments/assets/87815e26-be00-4995-b5d4-06951658459f)
 
 One of the most common types of cohort analyses looks at time-based cohorts which groups users/customers by specific time-frame
 
-#### Cohort analysis example 
+#### 2. Cohort Analysis example 
 
 ![image](https://github.com/user-attachments/assets/5550b705-1501-4506-be5c-5c43dd7b1367)
 
@@ -26,9 +26,6 @@ Retention table tell us:
  - How often users return and how valuable that cohort is. This can be linked to quality of product, operations and customer support
 
 
-
-Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
-***
 ### Dataset
 #### Entity Relationship Diagram
 <img width="583" alt="Ảnh màn hình 2023-07-04 lúc 17 03 30" src="https://github.com/hanhdang9/8-Week-SQL-Challenge/assets/122140143/2b4e0357-ad37-4a73-b1fc-b8a37dc62cbc">
