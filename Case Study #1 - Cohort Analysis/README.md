@@ -37,21 +37,24 @@ The dataset used in the project is available in the "Data" folder. The data set 
 
 ````sql
 WITH ListOrder AS (
-SELECT DISTINCT CustomerKey --customer list by order date
-, OrderDate
+SELECT DISTINCT 
+  CustomerKey, --customer list by order date
+  OrderDate
 FROM FactInternetSales
 ) 
 , ListFirstPurchase AS (
-SELECT CustomerKey  -- retrieve FirstPurchaseMonth
-, MIN(OrderDate) as FirstPurchaseDate
-, FORMAT(MIN(OrderDate), 'yyyy-MM') as FirstPurchaseMonth
+SELECT 
+  CustomerKey,  -- retrieve FirstPurchaseMonth
+  MIN(OrderDate) as FirstPurchaseDate,
+  FORMAT(MIN(OrderDate), 'yyyy-MM') as FirstPurchaseMonth
 FROM ListOrder
 GROUP BY CustomerKey
 )
 , CohortIndex AS (
-SELECT DISTINCT O.CustomerKey
-, FirstPurchaseMonth
-, DATEDIFF(MONTH, FirstPurchaseDate, OrderDate) as CohortIndex -- Number of months customers return to buy
+SELECT DISTINCT 
+  O.CustomerKey,
+  FirstPurchaseMonth,
+  DATEDIFF(MONTH, FirstPurchaseDate, OrderDate) as CohortIndex -- Number of months customers return to buy
 FROM ListOrder as O 
 LEFT JOIN ListFirstPurchase as FP 
 ON O.CustomerKey = FP.CustomerKey
@@ -78,12 +81,10 @@ For CohortIndex IN ([0],
 ) as pvt 
 WHERE FirstPurchaseMonth >= '2020-01' 
 ORDER BY FirstPurchaseMonth  
-
 -- Format into % 
-
-
-SELECT FirstPurchaseMonth
-,  FORMAT(1.0* [0]/[0], 'p') as [0],
+SELECT 
+ FirstPurchaseMonth,
+ FORMAT(1.0* [0]/[0], 'p') as [0],
  FORMAT(1.0* [1]/[0], 'p') as [1],
  FORMAT(1.0* [2]/[0], 'p') as [2],
  FORMAT(1.0* [3]/[0], 'p') as [3],
@@ -97,7 +98,7 @@ SELECT FirstPurchaseMonth
  FORMAT(1.0* [11]/[0], 'p') as [11],
  FORMAT(1.0* [12]/[0], 'p') as [12]
 FROM #cohort_pivot
-ORDER BY FirstPurchaseMonth 
+ORDER BY FirstPurchaseMonth
 ````
 
 *Answer:*
