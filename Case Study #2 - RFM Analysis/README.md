@@ -1,8 +1,5 @@
-# Case Study #1 - Cohort retention analysis
-![image](https://github.com/user-attachments/assets/73ce3876-d521-4d69-8955-6e4bbf3f1fdb)
-
-
-
+# Case Study #2 - RFM Analysis
+![image](https://github.com/user-attachments/assets/66370439-2d09-4970-a029-f5d83821e0b8)
 
 ## Table of Contents
 * [Context](#context)
@@ -10,9 +7,9 @@
 * [Questions and Answers](#questions-and-answers)
 ***
 ### Context
-Danny is opening up a cute little restaurant that sells his 3 favourite foods: sushi, curry and ramen. 
-Danny’s Diner is in need of your assistance to help the restaurant stay afloat - the restaurant has captured some very basic data from their few months of operation.
-Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
+- **1. Customer segmentation**
+- ![image](https://github.com/user-attachments/assets/a5cda3c3-6f75-4f7e-80e9-73051a206aaa)
+
 ***
 ### Dataset
 #### Entity Relationship Diagram
