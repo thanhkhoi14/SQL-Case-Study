@@ -33,18 +33,71 @@ The dataset used in the project is available in the "Data" folder. The data set 
 
 ***
 ### Questions and Answers
-**Write a query that'll query Rention Cohort Analysis based on First time Customer Purchase in the period of Jan 2020 to Jan 2021 What is the total amount each customer spent at the restaurant?**
+**📝Write a query that'll query Rention Cohort Analysis based on First time Customer Purchase in the period of Jan 2020 to Jan 2021 What is the total amount each customer spent at the restaurant?**
 
 ````sql
-SET search_path = dannys_diner;
-SELECT 
-	s.customer_id,
-	SUM(m.price) total_spend
-FROM dannys_diner.sales s
-LEFT JOIN dannys_diner.menu m
-ON s.product_id = m.product_id
-GROUP BY 1
-ORDER BY 1;
+WITH ListOrder AS (
+SELECT DISTINCT CustomerKey --customer list by order date
+, OrderDate
+FROM FactInternetSales
+) 
+, ListFirstPurchase AS (
+SELECT CustomerKey  -- retrieve FirstPurchaseMonth
+, MIN(OrderDate) as FirstPurchaseDate
+, FORMAT(MIN(OrderDate), 'yyyy-MM') as FirstPurchaseMonth
+FROM ListOrder
+GROUP BY CustomerKey
+)
+, CohortIndex AS (
+SELECT DISTINCT O.CustomerKey
+, FirstPurchaseMonth
+, DATEDIFF(MONTH, FirstPurchaseDate, OrderDate) as CohortIndex -- Number of months customers return to buy
+FROM ListOrder as O 
+LEFT JOIN ListFirstPurchase as FP 
+ON O.CustomerKey = FP.CustomerKey
+)
+SELECT *  -- pivot
+INTO #cohort_pivot
+FROM CohortIndex
+PIVOT (
+COUNT(CustomerKey) 
+For CohortIndex IN ([0],
+[1],
+[2],
+[3],
+[4],
+[5],
+[6],
+[7],
+[8],
+[9],
+[10],
+[11],
+[12]
+) 
+) as pvt 
+WHERE FirstPurchaseMonth >= '2020-01' 
+ORDER BY FirstPurchaseMonth  
+
+-- Format into % 
+
+
+SELECT FirstPurchaseMonth
+,  FORMAT(1.0* [0]/[0], 'p') as [0],
+ FORMAT(1.0* [1]/[0], 'p') as [1],
+ FORMAT(1.0* [2]/[0], 'p') as [2],
+ FORMAT(1.0* [3]/[0], 'p') as [3],
+ FORMAT(1.0* [4]/[0], 'p') as [4],
+ FORMAT(1.0* [5]/[0], 'p') as [5],
+ FORMAT(1.0* [6]/[0], 'p') as [6],
+ FORMAT(1.0* [7]/[0], 'p') as [7],
+ FORMAT(1.0* [8]/[0], 'p') as [8],
+ FORMAT(1.0* [9]/[0], 'p') as [9],
+ FORMAT(1.0* [10]/[0], 'p') as [10],
+ FORMAT(1.0* [11]/[0], 'p') as [11],
+ FORMAT(1.0* [12]/[0], 'p') as [12]
+FROM #cohort_pivot
+ORDER BY FirstPurchaseMonth 
 ````
 
 *Answer:*
