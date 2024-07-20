@@ -40,68 +40,80 @@
 
 ***
 ### Dataset
-#### Entity Relationship Diagram
-<img width="583" alt="Ảnh màn hình 2023-07-04 lúc 17 03 30" src="https://github.com/hanhdang9/8-Week-SQL-Challenge/assets/122140143/2b4e0357-ad37-4a73-b1fc-b8a37dc62cbc">
 
+The dataset used in the project is available in the "Data" folder. The data set includes information about customers' online purchases stored in the FactInternetSales table.
+- 📅 FactInternetSales
 
-#### Example Datasets
-* Table 1: sales
-
-| customer_id | order_date | product_id |
-| ----------- | ---------- | ---------- |
-| A           | 2021-01-01 | 1          |
-| A           | 2021-01-01 | 2          |
-| A           | 2021-01-07 | 2          |
-| A           | 2021-01-10 | 3          |
-| A           | 2021-01-11 | 3          |
-| A           | 2021-01-11 | 3          |
-| B           | 2021-01-01 | 2          |
-| B           | 2021-01-02 | 2          |
-| B           | 2021-01-04 | 1          |
-| B           | 2021-01-11 | 1          |
-| B           | 2021-01-16 | 3          |
-| B           | 2021-02-01 | 3          |
-| C           | 2021-01-01 | 3          |
-| C           | 2021-01-01 | 3          |
-| C           | 2021-01-07 | 3          |
-
-* Table 2: menu
-
-| product_id | product_name | price |
-| ---------- | ------------ | ----- |
-| 1          | sushi        | 10    |
-| 2          | curry        | 15    |
-| 3          | ramen        | 12    |
-
-* Table 3: members
-
-| customer_id | join_date  |
-| ----------- | ---------- |
-| A           | 2021-01-07 |
-| B           | 2021-01-09 |
 ***
 ### Questions and Answers
-**1. What is the total amount each customer spent at the restaurant?**
+**Write a query that'll query to implement RFM analysis into serveral segmentation like**
+- Loyal
+- Promising
+- Big spenders
+- New customers
+- Potential churn
+- Lost
 
 ````sql
-SET search_path = dannys_diner;
+WITH CustSales AS (
 SELECT 
-	s.customer_id,
-	SUM(m.price) total_spend
-FROM dannys_diner.sales s
-LEFT JOIN dannys_diner.menu m
-ON s.product_id = m.product_id
-GROUP BY 1
-ORDER BY 1;
+  CustomerKey,
+  COUNT(DISTINCT SalesOrderNumber) as Frequency ,
+  SUM(SalesAmount) as Monetary, 
+  MAX(OrderDate) as MostRecentOrderDate, 
+  DATEDIFF(DAY, MAX(OrderDate), (SELECT MAX(OrderDate) FROM dbo.FactInternetSales) ) as Recency 
+FROM dbo.FactInternetSales 
+GROUP BY CustomerKey) 
+
+, RFM_scoring AS (
+SELECT 
+  CustomerKey,
+  NTILE(4) OVER (ORDER BY Recency DESC) as rfm_recency,
+  NTILE(4) OVER (ORDER BY Frequency) as rfm_frequency,
+  NTILE(4) OVER (ORDER BY Monetary) as rfm_monetary 
+FROM CustSales)
+
+, RFM_score AS (
+SELECT 
+  CustomerKey,
+  CONCAT(rfm_recency, rfm_frequency, rfm_monetary) as RFM_score
+FROM RFM_scoring
+) 
+
+, RFM_Segmentation AS ( 
+SELECT 
+  CustomerKey,
+  RFM_score,
+  CASE 
+WHEN RFM_score LIKE '1__' THEN 'Lost Customer' 
+WHEN RFM_score LIKE '[3,4][3,4][1,2]' THEN 'Promising' 
+WHEN RFM_score LIKE '[3,4][3,4][3,4]' THEN 'Loyal' 
+WHEN RFM_score LIKE '_[1,2]4' THEN 'Big spenders' 
+WHEN RFM_score LIKE '[3,4][1,2]_' THEN 'New customer' 
+WHEN RFM_score LIKE '2__' THEN 'Potential churn' 
+END AS CustomerSegmentation 
+FROM RFM_score
+) 
+
+SELECT 
+CustomerSegmentation, 
+COUNT(CustomerKey) as NoCustomer 
+FROM RFM_Segmentation
+GROUP BY CustomerSegmentation
 ````
 
 *Answer:*
 
-| **customer_id** | **total_spend** |
+| **Customer Segmentation** | **No.Customer** |
 | --------------- | --------------- |
-| **A**           | 76              |
-| **B**           | 74              |
-| **C**           | 36              |
+| Big spenders          | 26    |
+| Lost Customer          | 4621    |
+| Loyal           | 3545      |
+| New customer    | 2830    |
+|  Potential churn  | 4608      |
+|    Promising      | 2854       |
+
+
 ***
 **2. How many days has each customer visited the restaurant?**
 
