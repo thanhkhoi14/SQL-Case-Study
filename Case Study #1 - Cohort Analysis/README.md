@@ -11,8 +11,12 @@
 ***
 ### Context
 #### What is Cohort Analysis?
-Danny is opening up a cute little restaurant that sells his 3 favourite foods: sushi, curry and ramen. 
-Danny’s Diner is in need of your assistance to help the restaurant stay afloat - the restaurant has captured some very basic data from their few months of operation.
+A cohort is simply a group of people who have something in common.Therefore, a cohort analysis is simply an analysis of several different cohorts (i.e. groups of customers) to get a better understanding of behaviors, patterns, and trends.
+![image](https://github.com/user-attachments/assets/87815e26-be00-4995-b5d4-06951658459f)
+
+One of the most common types of cohort analyses looks at time-based cohorts which groups users/customers by specific time-frame
+
+
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
 ***
 ### Dataset
