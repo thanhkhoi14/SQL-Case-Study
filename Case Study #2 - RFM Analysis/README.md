@@ -46,7 +46,7 @@ The dataset used in the project is available in the "Data" folder. The data set 
 
 ***
 ### Questions and Answers
-**Write a query that'll query to implement RFM analysis into serveral segmentation like**
+**Write a query that'll query to implement RFM analysis into serveral segmentation like:**
 - Loyal
 - Promising
 - Big spenders
