@@ -1,4 +1,4 @@
-# Case Study #1 - Cohort retention analysis
+# Case Study #1 - Cohort Analysis
 ![image](https://github.com/user-attachments/assets/73ce3876-d521-4d69-8955-6e4bbf3f1fdb)
 
 
@@ -10,6 +10,7 @@
 * [Questions and Answers](#questions-and-answers)
 ***
 ### Context
+#### What is Cohort Analysis?
 Danny is opening up a cute little restaurant that sells his 3 favourite foods: sushi, curry and ramen. 
 Danny’s Diner is in need of your assistance to help the restaurant stay afloat - the restaurant has captured some very basic data from their few months of operation.
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
