@@ -1,5 +1,6 @@
 # Case Study #1 - Cohort retention analysis
-https://statics.cdn.200lab.io/2021/07/table1a2.png
+![image](https://github.com/user-attachments/assets/aa43b612-9c58-4380-848c-c2d47ff2d001)
+
 
 
 ## Table of Contents
