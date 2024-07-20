@@ -1,5 +1,6 @@
 # Case Study #1 - Cohort retention analysis
-![image](https://github.com/user-attachments/assets/aa43b612-9c58-4380-848c-c2d47ff2d001)
+![image](https://github.com/user-attachments/assets/73ce3876-d521-4d69-8955-6e4bbf3f1fdb)
+
 
 
 
