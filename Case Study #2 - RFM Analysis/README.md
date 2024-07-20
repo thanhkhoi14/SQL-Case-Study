@@ -12,7 +12,8 @@
  
  **2. RFM Analysis**
  ![image](https://github.com/user-attachments/assets/b5c7842f-7946-444c-b4f5-4490c7231941)
- Customer segmentation based on transaction history, purchase frequency, and order value:
+ 
+ **Customer segmentation based on transaction history, purchase frequency, and order value:**
 - Days since last purchase: Identify active and dormant customers
 - Purchase frequency: Categorize customers as loyal, occasional, or one-time buyers
 - Order value: Segment customers as high-value, average-value, or low-value
