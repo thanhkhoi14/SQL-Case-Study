@@ -33,7 +33,7 @@ The dataset used in the project is available in the "Data" folder. The data set 
 
 ***
 ### Questions and Answers
-** Using Database AdventureWorksDW2020, table dbo.FactInternetSales
+**Using Database AdventureWorksDW2020, table dbo.FactInternetSales
 Write a query that'll query Rention Cohort Analysis based on First time Customer Purchase in
 the period of Jan 2020 to Jan 2021 What is the total amount each customer spent at the restaurant?**
 
