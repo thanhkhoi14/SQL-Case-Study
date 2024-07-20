@@ -28,7 +28,7 @@ Retention table tell us:
 ***
 ### Dataset
 
-The dataset used in the project is available in the "Case Study #1 - Cohort Analysis" folder. The data set includes information about customers' online purchases stored in the FactInternetSales table.
+The dataset used in the project is available in the "Data" folder. The data set includes information about customers' online purchases stored in the FactInternetSales table.
 - 📅 FactInternetSales
 
 ***
