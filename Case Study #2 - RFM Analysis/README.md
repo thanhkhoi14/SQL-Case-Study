@@ -22,6 +22,10 @@
 
  **3. Scoring R, F, M on a scale of 1-4**
  ![image](https://github.com/user-attachments/assets/8a390107-9573-4bb5-94ee-633f8a794c8d)
+
+- Each criterion R, F, M is scored on a scale of 1-4. By combining these three scores, we obtain the RFM score (e.g., 441, 134).
+- The closer the customer's most recent purchase (R), the higher the score. The higher the frequency of purchases (F), the higher the score. The higher the purchase value (M), the higher the score.
+ 
 ***
 ### Dataset
 #### Entity Relationship Diagram
