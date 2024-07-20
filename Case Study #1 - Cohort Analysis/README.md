@@ -27,48 +27,15 @@ Retention table tell us:
 
 ***
 ### Dataset
-#### Entity Relationship Diagram
-<img width="583" alt="Ảnh màn hình 2023-07-04 lúc 17 03 30" src="https://github.com/hanhdang9/8-Week-SQL-Challenge/assets/122140143/2b4e0357-ad37-4a73-b1fc-b8a37dc62cbc">
 
+The dataset used in the project is available in the "Data" folder. The data set includes information about customers' online purchases stored in the FactInternetSales table.
+- 📅 FactInternetSales
 
-#### Example Datasets
-* Table 1: sales
-
-| customer_id | order_date | product_id |
-| ----------- | ---------- | ---------- |
-| A           | 2021-01-01 | 1          |
-| A           | 2021-01-01 | 2          |
-| A           | 2021-01-07 | 2          |
-| A           | 2021-01-10 | 3          |
-| A           | 2021-01-11 | 3          |
-| A           | 2021-01-11 | 3          |
-| B           | 2021-01-01 | 2          |
-| B           | 2021-01-02 | 2          |
-| B           | 2021-01-04 | 1          |
-| B           | 2021-01-11 | 1          |
-| B           | 2021-01-16 | 3          |
-| B           | 2021-02-01 | 3          |
-| C           | 2021-01-01 | 3          |
-| C           | 2021-01-01 | 3          |
-| C           | 2021-01-07 | 3          |
-
-* Table 2: menu
-
-| product_id | product_name | price |
-| ---------- | ------------ | ----- |
-| 1          | sushi        | 10    |
-| 2          | curry        | 15    |
-| 3          | ramen        | 12    |
-
-* Table 3: members
-
-| customer_id | join_date  |
-| ----------- | ---------- |
-| A           | 2021-01-07 |
-| B           | 2021-01-09 |
 ***
 ### Questions and Answers
-**1. What is the total amount each customer spent at the restaurant?**
+** Using Database AdventureWorksDW2020, table dbo.FactInternetSales
+Write a query that'll query Rention Cohort Analysis based on First time Customer Purchase in
+the period of Jan 2020 to Jan 2021 What is the total amount each customer spent at the restaurant?**
 
 ````sql
 SET search_path = dannys_diner;
