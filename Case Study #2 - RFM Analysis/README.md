@@ -7,8 +7,11 @@
 * [Questions and Answers](#questions-and-answers)
 ***
 ### Context
-- **1. Customer segmentation**
-- ![image](https://github.com/user-attachments/assets/a5cda3c3-6f75-4f7e-80e9-73051a206aaa)
+ **1. Customer segmentation**
+ ![image](https://github.com/user-attachments/assets/a5cda3c3-6f75-4f7e-80e9-73051a206aaa)
+ **2. RFM Analysis**
+ ![image](https://github.com/user-attachments/assets/b5c7842f-7946-444c-b4f5-4490c7231941)
+
 
 ***
 ### Dataset
