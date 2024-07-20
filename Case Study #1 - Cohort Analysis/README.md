@@ -17,6 +17,15 @@ A cohort is simply a group of people who have something in common.Therefore, a c
 
 One of the most common types of cohort analyses looks at time-based cohorts which groups users/customers by specific time-frame
 
+#### Cohort analysis example 
+
+![image](https://github.com/user-attachments/assets/5550b705-1501-4506-be5c-5c43dd7b1367)
+
+Retention table tell us:
+ - What % of people are coming back to the app after 3 days, 5 days,...revealing the quality of onboarding experience
+ - How often users return and how valuable that cohort is. This can be linked to quality of product, operations and customer support
+
+
 
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
 ***
