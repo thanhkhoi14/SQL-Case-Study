@@ -12,6 +12,7 @@
 ### Context
 #### What is Cohort Analysis?
 A cohort is simply a group of people who have something in common.Therefore, a cohort analysis is simply an analysis of several different cohorts (i.e. groups of customers) to get a better understanding of behaviors, patterns, and trends.
+
 ![image](https://github.com/user-attachments/assets/87815e26-be00-4995-b5d4-06951658459f)
 
 One of the most common types of cohort analyses looks at time-based cohorts which groups users/customers by specific time-frame
