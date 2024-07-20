@@ -25,7 +25,19 @@
 
 - Each criterion R, F, M is scored on a scale of 1-4. By combining these three scores, we obtain the RFM score (e.g., 441, 134).
 - The closer the customer's most recent purchase (R), the higher the score. The higher the frequency of purchases (F), the higher the score. The higher the purchase value (M), the higher the score.
- 
+
+ **4. Customer Segmentation by RFM**
+
+| Customer Group  | Characteristics | Marketing Strategies |
+| ----------- | ---------- | ---------- |
+| Loyal           | Recently purchased, high frequency, high order value | - Reward programs\\ - New products     |
+| Promising       | Recently purchased, high frequency, low order value | - Product recommendations   |
+| Big spenders    | High order value, low frequency | - Cross/up-sells\\ - Luxury products     |
+| New Customers   |Recently purchased, low frequency | - Membership offers   |
+| Potential churn | Purchased a while ago, no recent purchases | - Discount offers          |
+| Lost            | Purchased a long time ago, churned |          |
+
+
 ***
 ### Dataset
 #### Entity Relationship Diagram
