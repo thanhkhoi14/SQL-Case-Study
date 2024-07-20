@@ -30,9 +30,9 @@
 
 | Customer Group  | Characteristics | Marketing Strategies |
 | ----------- | ---------- | ---------- |
-| Loyal           | Recently purchased, high frequency, high order value | - Reward programs\N - New products     |
+| Loyal           | Recently purchased, high frequency, high order value | - Reward programs, New products     |
 | Promising       | Recently purchased, high frequency, low order value | - Product recommendations   |
-| Big spenders    | High order value, low frequency | - Cross/up-sells\\ - Luxury products     |
+| Big spenders    | High order value, low frequency | - Cross/up-sells, Luxury products     |
 | New Customers   |Recently purchased, low frequency | - Membership offers   |
 | Potential churn | Purchased a while ago, no recent purchases | - Discount offers          |
 | Lost            | Purchased a long time ago, churned |          |
