@@ -9,9 +9,14 @@
 ### Context
  **1. Customer segmentation**
  ![image](https://github.com/user-attachments/assets/a5cda3c3-6f75-4f7e-80e9-73051a206aaa)
+
  
  **2. RFM Analysis**
  ![image](https://github.com/user-attachments/assets/b5c7842f-7946-444c-b4f5-4490c7231941)
+
+ **3. Scoring R, F, M on a scale of 1-4**
+ ![image](https://github.com/user-attachments/assets/8a390107-9573-4bb5-94ee-633f8a794c8d)
+
  
  **Customer segmentation based on transaction history, purchase frequency, and order value:**
 - Days since last purchase: Identify active and dormant customers
